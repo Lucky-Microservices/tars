@@ -1,0 +1,16 @@
+spring:
+  jackson:
+    default-property-inclusion: non_null
+    deserialization:
+      # 反序列化时出现未知字段 不报错
+      fail-on-unknown-properties: false
+      # 接收单个字符串为list
+      accept_single_value_as_array: true
+    parser:
+      #允许出现特殊字符和转义符
+      allow-unquoted-control-chars: true
+      #允许出现单引号
+      allow-single-quotes: true
+    mapper:
+      # 反序列化时大小写不敏感
+      accept-case-insensitive-properties: true
